@@ -1,0 +1,19 @@
+# Core pipeline (hypernet, regress training, e2e training, inference, prompt encoding)
+torch>=2.4
+diffusers>=0.32          # provides AutoencoderKLWan, WanImageToVideoPipeline, FlowMatchEulerDiscreteScheduler
+transformers>=4.49       # T5 (text), CLIPVisionModel (I2V image encoder)
+accelerate>=0.34
+safetensors>=0.4
+huggingface_hub>=0.25
+numpy
+Pillow
+imageio
+imageio-ffmpeg           # export_to_video
+ftfy
+
+# Stage-2 e2e training: video decoding (one of these; decord preferred, torchvision is the fallback)
+decord; platform_system != "Darwin"
+torchvision>=0.19
+
+# Optional: experiment logging
+wandb

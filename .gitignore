@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Experiment outputs
+results/
+logs/
+wandb/
+outputs/
+
+# Large artifacts / checkpoints / media
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.distcp
+*.mp4
+*.mov
+*.avi
